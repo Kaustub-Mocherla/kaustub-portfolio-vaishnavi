@@ -351,7 +351,6 @@ document.addEventListener("click", function (e) {
             State University.
           </p>
           <div class="hero-actions">
-            <a href = "Updated_Resume_Vaishnavi-1.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
             <a href="#experience" class="btn btn-secondary">View Experience</a>
           </div>
         </div>
@@ -536,6 +535,38 @@ document.addEventListener("click", function (e) {
                 </div>
               </div>
             </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <span class="company">
+                    <img src="assets/icons/medicover.png" alt="Medicover Hospitals" class="company-banner company-banner--medicover" />
+                  </span>
+                  <h3 class="role-title">Data Analyst / Engineer</h3>
+                  <span class="duration">Hyderabad, Telangana, India · Hybrid <br> Jan 2021 – Dec 2022</span>
+                </div>
+                <ul class="achievements">
+                  <li>Automated high-volume ETL workflows using Python (Pandas, SQLAlchemy) and complex SQL to process 2M+ records, eliminating 750+ hours of manual effort annually while ensuring data integrity across 5 clinical departments</li>
+                  <li>Built the “Medicover Executive Pulse” Power BI KPI dashboard adopted by 8+ senior stakeholders (VPs, Zonal Heads) as a single source of truth for hospital-wide performance</li>
+                  <li>Applied process mining and outlier detection on OPD and lab data to remove bottlenecks, cutting patient wait times by 60% and improving revenue assurance through billing and TPA/insurance optimization</li>
+                  <li>Developed Scikit-learn/XGBoost lead-scoring models to identify high-conversion patient segments, driving a roadmap that increased acquisition by 40%</li>
+                  <li>Delivered clinical analytics for 3 departments, translating medical datasets into resource allocation and throughput models used by 30–50 clinicians</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">SQLAlchemy</span>
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">Power BI</span>
+                  <span class="tech-tag">Process Mining</span>
+                  <span class="tech-tag">XGBoost</span>
+                  <span class="tech-tag">Scikit-learn</span>
+                  <span class="tech-tag">ETL</span>
+                  <span class="tech-tag">Healthcare Analytics</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -658,13 +689,13 @@ document.addEventListener("click", function (e) {
     <p class="what-i-do-description">I specialize in building end-to-end data solutions, from ETL pipelines to advanced AI systems, leveraging modern cloud technologies and machine learning frameworks.</p>
     
     <!-- Skills Carousel -->
-    <div class="skills-carousel">
-      <div class="carousel-header">
-        <h3 id="category-title" class="carousel-category-title">Programming Languages</h3>
-        <div class="carousel-indicators">
-          <div class="indicator active"></div>
-          <div class="indicator"></div>
-          <div class="indicator"></div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-category="All">All</button>
+          <button class="filter-btn" data-category="LLMs">LLMs</button>
+          <button class="filter-btn" data-category="ML">ML</button>
+          <button class="filter-btn" data-category="DA">DA</button>
+          <button class="filter-btn" data-category="DE">DE</button>
+        </div>
           <div class="indicator"></div>
           <div class="indicator"></div>
         </div>
@@ -1082,7 +1113,7 @@ document.addEventListener("click", function (e) {
 
   <script>
     // Loading animation
-    window.addEventListener('load', function () {
+    window.addEventListener('DOMContentLoaded', function () {
       const loader = document.getElementById('loader');
       const loaderText = document.querySelector('.loader-text');
       let progress = 0;

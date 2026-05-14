@@ -1389,6 +1389,14 @@ section {
   filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.3));
 }
 
+.company-banner--medicover {
+  max-width: 320px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 
 
 .duration {
@@ -2256,8 +2264,9 @@ section {
 /* Separate floating buttons */
 .floating-buttons {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 26px;
+  top: calc(95px + 320px + 16px);
+  bottom: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -2270,6 +2279,10 @@ section {
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
+}
+
+.expandable-buttons .contact-btn {
+  order: -1;
 }
 
 .static-button {
@@ -2421,7 +2434,8 @@ section {
   
   .floating-buttons {
     right: 15px;
-    bottom: 20px;
+    top: calc(95px + 320px + 16px);
+    bottom: auto;
   }
   
   .floating-btn {
@@ -2429,9 +2443,6 @@ section {
     height: 40px;
   }
   
-  .resume-btn:hover {
-    width: 110px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -2441,6 +2452,7 @@ section {
   
   .floating-buttons {
     right: 15px;
+    top: auto;
     bottom: 20px;
   }
 }

@@ -79,12 +79,6 @@ class DeloitteNavigation {
     floatingButtons.className = 'floating-buttons';
     floatingButtons.innerHTML = `
       <div class="expandable-buttons">
-        <button class="floating-btn expandable-btn resume-btn" id="resumeBtn" title="View Resume">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"></path>
-          </svg>
-          <span class="expandable-btn-text">Resume</span>
-        </button>
         <button class="floating-btn expandable-btn contact-btn" id="contactBtn" title="Contact Me">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -117,7 +111,6 @@ class DeloitteNavigation {
     document.getElementById('shareBtn').addEventListener('click', () => this.shareContent());
     document.getElementById('printBtn').addEventListener('click', () => this.printPage());
     document.getElementById('scrollTopBtn').addEventListener('click', () => this.scrollToTop());
-    document.getElementById('resumeBtn').addEventListener('click', () => this.downloadResume());
     document.getElementById('contactBtn').addEventListener('click', () => this.contactAction());
     
     // Scroll events
@@ -126,11 +119,6 @@ class DeloitteNavigation {
       this.updateActiveSection();
       this.updateScrollToTopButton();
     }, { passive: true });
-  }
-  
-  downloadResume() {
-    // Redirect to resume selector page
-    window.location.href = 'resume-selector.html';
   }
   
   contactAction() {
